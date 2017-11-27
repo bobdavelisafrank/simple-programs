@@ -1,0 +1,62 @@
+== Binary Search Tree REPL
+
+This is a simple CLI program which performs insertions/removals onto a binary
+search tree. It is written in Ada, and it makes use of Access types to
+implement the binary trees from scratch.
+
+Currently, the tree library only handles integers, and it only has 3 very basic
+procedures written for it -- but I think that is fine for a small project like
+this.
+
+-- Building
+
+A build can be created using the command `gnat make src/bst_repl`, creating an
+executable of the same name.
+
+-- Programming Exercise
+
+My motivation behind this was as an Ada programming exercise, since I am in the
+process of learning the language.
+
+When starting this (working at the REPL) I thought I might end up using
+Ada.Collections.Multiway_Trees, but the given interface for it is at a pretty
+low level of abstraction (it seems more to be a base that you build your
+desired tree library on top of, like implementing B-trees for a file-system).
+As such, I went ahead and made my own binary trees, learning about pointers
+and manual memory management in Ada along the way.
+
+-- Exceptions
+
+With my background predominantly towards C/asm and functional languages, I
+don't have any experience working with exceptions. I think I've done an alright
+job here, though, by a reasonable-sounding metric I found online of using
+exceptions for external usage problems, things that the user should be
+aware of.
+
+I'm surprised how easy it is to work with exceptions, especially when it comes
+to making a program that doesn't just spew out compiler-generated errors, and
+especially when it comes to having to writing error-checking code in the
+functions themselves. Instead, if something goes wrong all the burden of
+handling it comes down to the person who caused it -- the resulting programs
+not having to be directly resistant to every error condition.
+
+Obviously I won't be able to take that into deep systems code like kernels
+without writing Windows 95/98, but it's a feature I'll be on the look out for
+when it comes to low to mid-level languages.
+
+-- My favored pieces
+
+If there's anything to be proud of in this program, I'd say it's the error
+messages. They indicate the user's fault, have a slight edge of humor,
+don't insult anybody, and tend to work in a wider degree of circumstances.
+
+    ? i 3.141
+    That's a creative number, but I can't really use it.
+
+    ? i 999999999999999999999999999999999999999999999999
+    That's a creative number, but I can't really use it.
+
+    ? i asscakes
+    That's a creative number, but I can't really use it.
+
+== Thanks for reading!
