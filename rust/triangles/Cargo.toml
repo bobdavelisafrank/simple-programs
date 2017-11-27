@@ -1,0 +1,6 @@
+[package]
+name = "triangles"
+version = "0.1.0"
+authors = ["maxwell"]
+
+[dependencies]
