@@ -1,0 +1,14 @@
+This program is probably like 75 lines of actual code, with an added 150 for
+documenting and logging progress throughout it.
+
+To find out why, search the document for capitalized Z's, notice that where they
+are puts them in the scope of an already define variable X, and understand that
+I automatically had put X's where those Z's are.
+
+
+
+
+
+
+This is why you make descriptive variable names. The 'X' should really have been
+'Number_of_Slaves' instead...

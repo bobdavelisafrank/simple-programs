@@ -1,0 +1,5 @@
+I'm writing this alongside this crash dump to explain why it happened.
+
+Basically, it's a case of recursion where the "stop recursing" state was never
+reached due to a change of inputs to labeling caused by a catch-all case for a 
+function's input.
